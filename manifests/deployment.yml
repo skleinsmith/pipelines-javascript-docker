@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: skleinsmithpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: skleinsmithpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: skleinsmithpipelinesjavascriptdocker 
+          image: simon88containerregistry.azurecr.io/skleinsmithpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
